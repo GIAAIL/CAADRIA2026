@@ -14,7 +14,8 @@
         // 確保DOM已準備好再加載
         document.addEventListener('DOMContentLoaded', () => {
             const script = document.createElement('script');
-            script.src = 'https://cdn.jsdelivr.net/gh/GIAAIL/CAADRIA2026@main/dashboard.js?v=1';
+            // script.src = 'https://cdn.jsdelivr.net/gh/GIAAIL/CAADRIA2026@main/dashboard.js?v=1';
+            script.src = 'https://raw.githubusercontent.com/GIAAIL/CAADRIA2026/main/dashboard.js?v=1';
             // script.src = 'dashboard.js?v=1';
             script.onerror = () => console.error('Dashboard加載失敗');
             script.onload = () => console.log('Dashboard加載成功');
