@@ -18,6 +18,15 @@
     DATE_END: "2026-05-03",
   };
 
+  const TAB_GID = {
+    news: "0",
+    schedule: "1352744782",
+    sessions: "1507465000",
+    papers: "469246089",
+    shuttle: "1125216042",
+    keynotes: "884721270",
+  };
+
   const RC = {
     A: { bg: "#FCEBEB", border: "#C0392B", text: "#791F1F", label: "#C0392B" },
     B: { bg: "#E6F1FB", border: "#2471A3", text: "#0C447C", label: "#2471A3" },
@@ -120,13 +129,14 @@
     var url =
       "https://docs.google.com/spreadsheets/d/e/" +
       CFG.SHEET_ID +
-      "/pub?output=csv&sheet=" +
-      encodeURIComponent(tab);
+      "/pub?output=csv&gid=" +
+      TAB_GID[tab];
     console.log("url", url);
     const r = await fetch(url);
     if (!r.ok) throw new Error('Fetch "' + tab + '" failed: ' + r.status);
     return parseCSV(await r.text());
   }
+
   function parseCSV(csv) {
     const lines = csv.split("\n");
     if (lines.length < 2) return [];
