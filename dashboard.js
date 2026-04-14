@@ -129,7 +129,7 @@
     var url =
       "https://docs.google.com/spreadsheets/d/e/" +
       CFG.SHEET_ID +
-      "/pub?output=csv&gid=" +
+      "/pubhtml#gid=" +
       TAB_GID[tab];
     console.log("url", url);
     const r = await fetch(url);
