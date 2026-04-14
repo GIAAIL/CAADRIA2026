@@ -7,8 +7,7 @@
 
   // CONFIG
   const CFG = {
-    SHEET_ID:
-      "2PACX-1vShBv97QhKprw_EPV9boz01ccflttzlHB02_pkFyvegavJwB9p99uLDE1VhdDvRf17po3VcunjE5JkL",
+    SHEET_ID: "10kORqITm3-HMopvgxDH3zZEPPdcT46K8dvsI6gUf-II",
     TZ: "Asia/Taipei",
     REFRESH_NEWS_MS: 60000,
     REFRESH_CLOCK_MS: 60000,
