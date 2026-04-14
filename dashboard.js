@@ -116,10 +116,10 @@
 
   // GOOGLE SHEETS FETCHER + CSV PARSER
   async function fetchTab(tab) {
-    const url =
-      "https://docs.google.com/spreadsheets/d/" +
+    var url =
+      "https://docs.google.com/spreadsheets/d/e/" +
       CFG.SHEET_ID +
-      "/gviz/tq?tqx=out:csv&sheet=" +
+      "/pub?output=csv&sheet=" +
       encodeURIComponent(tab);
     const r = await fetch(url);
     if (!r.ok) throw new Error('Fetch "' + tab + '" failed: ' + r.status);
